@@ -277,3 +277,15 @@ snippet gtepar "GTest:add parameterized test"
 # GTest:instantiate parameterized test
 snippet gteparins "GTest:instantiate parameterized test"
 	INSTANTIATE_TEST_SUITE_P(${1:InstantiationName}, ${2:SuiteName}, ${0});
+
+snippet test "catch2"
+	TEST_CASE("${1:description}") {
+		REQUIRE(${2:false});
+	}
+
+snippet rf "read file line by line"
+	std::ifstream file{"${1:filename}"};
+	for(std::string line{}; std::getline(file, line);) {
+		${2:file}
+	}
+
