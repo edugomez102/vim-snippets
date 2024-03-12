@@ -1,2 +1,13 @@
 snippet co
 	Co-authored-by: ${1} <${2}>
+
+# get branch name
+
+snippet fe
+	feat(${1:`system('git symbolic-ref HEAD | sed -e "s/^refs\/heads\///"')[0:-2]`}): ${2}
+
+snippet fix 
+	fix:(${1:`system('git symbolic-ref HEAD | sed -e "s/^refs\/heads\///"')[0:-2]`}): ${2}
+
+snippet test
+	fix:(${1:`system('git symbolic-ref HEAD | sed -e "s/^refs\/heads\///"')[0:-2]`}): ${2}
