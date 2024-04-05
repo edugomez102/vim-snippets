@@ -159,8 +159,6 @@ snippet ld
 
 snippet ret
 	return ${0}
-snippet .
-	self.
 snippet sa self.attribute = attribute
 	self.${1:attribute} = $1
 
@@ -521,3 +519,6 @@ snippet fprs
 	print("$0", file=${1:sys.stderr})
 snippet fprf
 	print(f"$0", file=${1:sys.stderr})
+
+snippet todo
+	# TODO (`strftime("%Y-%m-%d")`): $0
